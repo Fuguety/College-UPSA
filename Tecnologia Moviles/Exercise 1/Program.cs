@@ -15,11 +15,11 @@ public class Sensors{
   {
 
     string existingJsonData = File.ReadAllText(filePath);
-    List<List<string>>? existingPeople = JsonSerializer.Deserialize<List<List<string>>>(existingJsonData);
+    List<List<string>>? existingArray = JsonSerializer.Deserialize<List<List<string>>>(existingJsonData);
 
-    existingPeople.Add(array);
+    existingArray.Add(array);
 
-    string updatedJsonData = JsonSerializer.Serialize(existingPeople);
+    string updatedJsonData = JsonSerializer.Serialize(existingArray);
     System.IO.File.WriteAllText(filePath, updatedJsonData);
 
   }
@@ -41,23 +41,34 @@ public class Sensors{
   // User interacts with array, select the array and the thingy within it
   public static void arrayCount(string filePath)
   {
+    int arraySelect;
+    int arraySelectitem;
     string existingJsonData = File.ReadAllText(filePath);
     List<List<string>>? arrayJson = JsonSerializer.Deserialize<List<List<string>>>(existingJsonData);
     Console.WriteLine("Amount of arrays: ", arrayJson.Count);
     
-
-    Console.WriteLine("\nWich array would you like to select?\nPlease note that '0' is the first array");
+    while (true){
+      try{
+       Console.WriteLine("\nWich array would you like to select?\nPlease note that '0' is the first array");
     
-    int arraySelect = Convert.ToInt32(Console.ReadLine());
+        arraySelect = Convert.ToInt32(Console.ReadLine());
+        break;
+      }catch {Console.WriteLine("Please insert number");}
+    }
 
     Console.WriteLine("\n");
 
     foreach (string item in arrayJson[arraySelect])
         Console.Write(item + " ");
     
-    Console.WriteLine("\nWich item of the array would you like to select?\nPlease note that '0' is the first item of the array");
+    while (true){
+      try{
+        Console.WriteLine("\nWich item of the array would you like to select?\nPlease note that '0' is the first item of the array");
 
-    int arraySelectitem = Convert.ToInt32(Console.ReadLine());
+        arraySelectitem = Convert.ToInt32(Console.ReadLine());
+        break;
+        }catch {Console.WriteLine("Please insert a number");}
+      }
 
     if (arraySelectitem < arrayJson[arraySelect].Count)
     {
@@ -71,28 +82,38 @@ public class Sensors{
     }
     else { Console.WriteLine("Item in array doesn't exist"); }
 
-    
-    
-
   }
-
 
   public static void Main()
   {
     
+    int sensors;
+    int measuraments;
+
     string filePath = "Array.json";
 
     emptyArray(filePath);
 
-    Console.WriteLine("How many arrays would you like to create?");
+    
+    while (true){
+      try{
+        Console.WriteLine("How many arrays would you like to create?");
 
-    int sensors = Convert.ToInt32(Console.ReadLine());
+        sensors = Convert.ToInt32(Console.ReadLine());
+        break;
+      } catch{Console.WriteLine("Please insert a number");}
+    }
 
-    Console.WriteLine("What is the size would you like the arrays to have?");
+    while (true){
+      try{
+      Console.WriteLine("What is the size would you like the arrays to have?");
 
-    int measuraments = Convert.ToInt32(Console.ReadLine());
+      measuraments = Convert.ToInt32(Console.ReadLine());
+      break;
+      }catch {Console.WriteLine("PLease insert a number");}
+    }
 
-    Console.WriteLine("Would you like to use random numbers?");
+    Console.WriteLine("Would you like to use random numbers? (Y,n)");
 
     string? answer = Console.ReadLine().ToLower();
 
@@ -107,7 +128,7 @@ public class Sensors{
       // Populate Array
       for (int x=1; x<=measuraments; x++)
       {    
-        if (answer == "yes")
+        if (answer == "yes" || answer == "" || answer == "y" || answer == " ")
           smt.Add(random.Next(1, 1000).ToString()); // Populate using random numbers
         
         else{
@@ -127,18 +148,18 @@ public class Sensors{
       }
     }
 
-    Console.WriteLine("\nWould you like to view all arrays?\n");
+    Console.WriteLine("\nWould you like to view all arrays? (Y/n)\n");
 
     string? arrayAnswer = Console.ReadLine().ToLower();
 
-    if (arrayAnswer == "yes")
+    if (arrayAnswer == "yes" || answer == "" || answer == "y" || answer == " ")
         Console.WriteLine(File.ReadAllText(filePath));
 
-    Console.WriteLine("Would you like to interact with the arrays?");
+    Console.WriteLine("Would you like to interact with the arrays? (Y/n)");
     
     string? answerInteract = Console.ReadLine().ToLower();
 
-    if (answerInteract == "yes")
+    if (answerInteract == "yes" || answer == "" || answer == "y" || answer == " ")
       arrayCount(filePath);
 
 
