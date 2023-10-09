@@ -4,14 +4,14 @@ using System.Text.Json;
 public class Sensors{
 
 // Prints Array
-  public static void printArray(List<string> array)
+  private static void printArray(List<string> array)
   {
     foreach (string str in array)
     Console.Write(str + " ");
   }
 
 // Write to Json file
-  public static void writeJson(string filePath, List<string> array)
+  private static void writeJson(string filePath, List<string> array)
   {
 
     string existingJsonData = File.ReadAllText(filePath);
@@ -24,7 +24,7 @@ public class Sensors{
 
   }
 
-  public static void emptyArray(string filePath)
+  private static void emptyArray(string filePath)
   {
     Console.WriteLine("Would you like to empty the json file?");
 
@@ -39,7 +39,7 @@ public class Sensors{
 
 
   // User interacts with array, select the array and the thingy within it
-  public static void arrayCount(string filePath)
+  private static void arrayCount(string filePath)
   {
     int arraySelect;
     int arraySelectitem;
