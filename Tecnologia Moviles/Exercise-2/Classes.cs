@@ -15,6 +15,7 @@ namespace Exercise_2
         public int Credits { get => credits; set => credits = value; }
     }
 
+    // Builder/Constructor
     public class ClassesBuilder
     {
 

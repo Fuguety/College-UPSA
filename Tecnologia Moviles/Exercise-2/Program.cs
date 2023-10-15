@@ -20,7 +20,10 @@ public class Intel
             Console.WriteLine("3 for adding a new class");
             Console.WriteLine("4 to show all students");
             Console.WriteLine("5 to show all professors");
-            Console.WriteLine("6 to show all classes\n");
+            Console.WriteLine("6 to show all classes");
+            Console.WriteLine("7 to add student to class");
+            Console.WriteLine("8 to add professor to class\n");
+            
             Console.WriteLine("9 to quit\n");
 
             int answer;
@@ -53,6 +56,14 @@ public class Intel
                 case 6:
                     Console.WriteLine();
                     us.PrintClasses();
+                    break;
+                case 7:
+                    Console.WriteLine();
+                    us.SelectStudent();
+                    break;
+                case 8:
+                    Console.WriteLine();
+                    us.SelectProfessor();
                     break;
                 case 9:
                     quit = true;
