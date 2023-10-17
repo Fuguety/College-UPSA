@@ -6,6 +6,8 @@
 **Everything is separated in folders for better understanting**
 
 - Tecnologia Moviles -> uses C# language, codes made to mobile apps
+ > Exercise 1: Plays with arrays and right them on a Json file </br>
+ > Exercise 2: Simulates a 'data_base' of a university (create student/professor and assign them to class subject)
 
 
 **Languages used so far**
