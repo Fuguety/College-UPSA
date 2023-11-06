@@ -5,7 +5,7 @@
 
 **Everything is separated in folders for better understanting**
 
-- Tecnologia Moviles -> uses C# language, codes made to mobile apps
+- Tecnologia Moviles -> Uses C# language, codes made to mobile apps
  > Exercise 1: Plays with arrays and writes them on a Json file </br>
  > Exercise 2: Simulates a 'data_base' of a university (create student/professor and assign them to class subject)
 
@@ -18,6 +18,8 @@
 
 ![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white)
 ![DOTNET](https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white)
+![Python](https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=white)
+
 
 **OS used at college**
 
