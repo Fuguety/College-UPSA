@@ -1,6 +1,7 @@
+# Author: Lucas Barreiro Gomes
 import numpy as np
-import sympy as sp
 import cmath
+from numpy import sqrt
 
 def find_quadratic_roots(a, b, c):
     discriminant = b**2 - 4*a*c
@@ -155,7 +156,77 @@ while (out):
 
     elif (answer == 4):
 
-        continue
+        A = np.array([
+            [1, 0, 0],
+            [0, 1, 0],
+            [0, 0, 1]])
+        
+        B = np.array([
+            [1, 1, 1],
+            [1, 2, 1],
+            [1, 1, 1]])
+        
+        C = np.array([
+            [1, 1, 1],
+            [0, sqrt(2), -sqrt(2)],
+            [1, -1, -1]])
+        
+        # AB - BA
+        result1 = np.dot(A, B) - np.dot(B, A)
+
+        # A^2 + B^2 + C^2
+        result2 = np.dot(A, A) + np.dot(B, B) + np.dot(C, C)
+
+        # sqrt(A) + sqrt(B) - sqrt(C)
+        result3 = sqrt(A) + sqrt(B) - sqrt(C)
+        
+        # e^A * (e^B + e^C)
+        eA = np.exp(A)
+        eB = np.exp(B)
+        eC = np.exp(C)
+        result4 = np.dot(eA, eB + eC)
+
+        #  rank, inverse, trace and determinant
+        rank_A = np.linalg.matrix_rank(A)
+        inv_A = np.linalg.inv(A)
+        trace_A = np.trace(A)
+        det_A = np.linalg.det(A)
+
+        rank_B = np.linalg.matrix_rank(B)
+        trace_B = np.trace(B)
+        det_B = np.linalg.det(B)
+
+        rank_C = np.linalg.matrix_rank(C)
+        inv_C = np.linalg.inv(C)
+        trace_C = np.trace(C)
+        det_C = np.linalg.det(C)
+
+        # printing time :)
+        print("AB - BA:\n", result1)
+        print("\nA^2 + B^2 + C^2:\n", result2)
+        print("\nsqrt(A) + sqrt(B) - sqrt(C)\n", result3)
+        print("\ne^A * (e^B + e^C):\n", result4)
+
+        print("Rank, inverse, trace and determinant of A:")
+        print("Rank", rank_A)
+        print("Inverse:\n", inv_A)
+        print("Trace:", trace_A)
+        print("Determinant:", det_A)
+
+        print("Rank, inverse, trace and determinant of B:")
+        print("Rank", rank_B)
+        print("Inverse:\n", "There is no inverse on B")
+        print("Trace:", trace_B)
+        print("Determinant:", det_B)
+
+        print("Rank, inverse, trace and determinant of C:")
+        print("Rank", rank_C)
+        print("Inverse:\n", inv_C)
+        print("Trace:", trace_C)
+        print("Determinant:", det_C)
+        
+
+        
 
     elif (answer == 5):
 
