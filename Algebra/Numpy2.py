@@ -1,37 +1,7 @@
 # Author: Lucas Barreiro Gomes
+
 import numpy as np
-import cmath
-from numpy import sqrt
-
-def find_quadratic_roots(a, b, c):
-    discriminant = b**2 - 4*a*c
-
-    if discriminant > 0:
-
-        root1 = (-b + cmath.sqrt(discriminant)) / (2*a)
-        root2 = (-b - cmath.sqrt(discriminant)) / (2*a)
-        print("Two real roots:")
-        print("Root 1:", root1)
-        print("Root 2:", root2)
-
-    elif discriminant == 0:
-
-        root = -b / (2*a)
-        print("One real double root:")
-        print("Root:", root)
-
-    else:
-        real_part = -b / (2*a)
-        imaginary_part = cmath.sqrt(-discriminant) / (2*a)
-        root1 = complex(real_part, imaginary_part)
-        root2 = complex(real_part, -imaginary_part)
-        print("Complex roots:")
-        print("Root 1:", root1)
-        print("Root 2:", root2)
-
-
-
-
+import sympy as sp
 
 
 out = True
@@ -41,247 +11,190 @@ while (out):
     print("Welcome\nWich question would you like to see the answer?")
     answer = input()
 
-    while (not isinstance(answer, str) or not (answer.isnumeric() and 0 < int(answer) < 9)):
+    while (not isinstance(answer, str) or not (answer.isnumeric() and 0 < int(answer) < 15)):
         print("Please insert a valid question number")
         answer = input()
     
     answer = int(answer)
 
     if (answer == 1):
-
-        matrix = np.random.normal(0, 1, (10, 10))
-
-        row_sums = np.sum(matrix, axis=1)
        
-        column_sums = np.sum(matrix, axis=0)
-       
-        total_sum = np.sum(matrix)
+        matrix = [
+            [1, 2, 3, 4],
+            [5, 6, 7, 8],
+            [9, 10, 11, 12]
+        ]
 
-        determinant = np.linalg.det(matrix)
+        num_rows = len(matrix)
+        num_columns = len(matrix[0])  
 
-        rank = np.linalg.matrix_rank(matrix)
-
-        num_columns = matrix.shape[1]
-
-        element_type = matrix.dtype
-
-        print("Sum of rows:")
-        print(row_sums)
-
-        print("\nSum of columns:")
-        print(column_sums)
-
-        print("\nSum of all elements in the matrix:")
-        print(total_sum)
-
-        print("\nDeterminant of the matrix:")
-        print(determinant)
-
-        print("\nRank of the matrix:")
-        print(rank)
-
-        print("\nNumber of columns:")
-        print(num_columns)
-
-        print("\nType of elements in the matrix:")
-        print(element_type)
+        print(f"Number of rows: {num_rows}")
+        print(f"Number of columns: {num_columns}")
 
     elif (answer == 2):
 
-        matrix = np.random.randint(0, 10, (5, 5))
+        vector1 = np.array([1, 2, 3])
+        vector2 = np.array([4, 5, 6])
 
-        row_sums = np.sum(matrix, axis=1)
+        columns = np.concatenate((vector1, vector2), axis=0)
 
-        column_sums = np.sum(matrix, axis=0)
+        lines = np.vstack((vector1, vector2))
 
-        total_sum = np.sum(matrix)
+        print("Columns:")
+        print(columns)
 
-        determinant = np.linalg.det(matrix)
-
-        rank = np.linalg.matrix_rank(matrix)
-
-        num_rows = matrix.shape[0]
-
-        element_type = matrix.dtype
-
-        print("5x5 Matrix:")
-        print(matrix)
-
-        print("\nSum of rows:")
-        print(row_sums)
-
-        print("\nSum of columns:")
-        print(column_sums)
-
-        print("\nSum of all elements in the matrix:")
-        print(total_sum)
-
-        print("\nDeterminant of the matrix:")
-        print(determinant)
-
-        print("\nRank of the matrix:")
-        print(rank)
-
-        print("\nNumber of rows:")
-        print(num_rows)
-
-        print("\nType of elements in the matrix:")
-        print(element_type)
-
+        print("\nLines:")
+        print(lines)
+    
     elif (answer == 3):
 
-        A = np.array([[2, 0, 0, 0, 0],
-                      [0, 3, 0, 0, 0],
-                      [0, 0, 4, 0, 0],
-                      [0, 0, 0, 5, 0],
-                      [0, 0, 0, 0, 6]])
+        matrix = np.array([
+            [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+            [11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+            [21, 22, 23, 24, 25, 26, 27, 28, 29, 30],
+            [31, 32, 33, 34, 35, 36, 37, 38, 39, 40],
+            [41, 42, 43, 44, 45, 46, 47, 48, 49, 50],
+            [51, 52, 53, 54, 55, 56, 57, 58, 59, 60],
+            [61, 62, 63, 64, 65, 66, 67, 68, 69, 70],
+            [71, 72, 73, 74, 75, 76, 77, 78, 79, 80],
+            [81, 82, 83, 84, 85, 86, 87, 88, 89, 90],
+            [91, 92, 93, 94, 95, 96, 97, 98, 99, 100]
+        ])
+        
 
-        diagonal_sum = np.trace(A)
-
-        determinant = np.linalg.det(A)
-
-        inverse_matrix = np.linalg.inv(A)
-
-        print("Diagonal matrix A:")
-        print(A)
-
-        print("\nSum of diagonal elements:")
-        print(diagonal_sum)
-
-        print("\nDeterminant of matrix A:")
-        print(determinant)
-
-        print("\nInverse matrix of A:")
+        inverse_matrix = np.linalg.pinv(matrix)
+        
+        print("Original matrix:")
+        print(matrix)
+        
+        print("\nInverse matrix:")
         print(inverse_matrix)
 
     elif (answer == 4):
 
-        A = np.array([
-            [1, 0, 0],
-            [0, 1, 0],
-            [0, 0, 1]])
-        
-        B = np.array([
-            [1, 1, 1],
-            [1, 2, 1],
-            [1, 1, 1]])
-        
-        C = np.array([
-            [1, 1, 1],
-            [0, sqrt(2), -sqrt(2)],
-            [1, -1, -1]])
-        
-        # AB - BA
-        result1 = np.dot(A, B) - np.dot(B, A)
+        random_array = np.random.rand(4, 5)
 
-        # A^2 + B^2 + C^2
-        result2 = np.dot(A, A) + np.dot(B, B) + np.dot(C, C)
-
-        # sqrt(A) + sqrt(B) - sqrt(C)
-        result3 = sqrt(A) + sqrt(B) - sqrt(C)
-        
-        # e^A * (e^B + e^C)
-        eA = np.exp(A)
-        eB = np.exp(B)
-        eC = np.exp(C)
-        result4 = np.dot(eA, eB + eC)
-
-        #  rank, inverse, trace and determinant
-        rank_A = np.linalg.matrix_rank(A)
-        inv_A = np.linalg.inv(A)
-        trace_A = np.trace(A)
-        det_A = np.linalg.det(A)
-
-        rank_B = np.linalg.matrix_rank(B)
-        trace_B = np.trace(B)
-        det_B = np.linalg.det(B)
-
-        rank_C = np.linalg.matrix_rank(C)
-        inv_C = np.linalg.inv(C)
-        trace_C = np.trace(C)
-        det_C = np.linalg.det(C)
-
-        # printing time :)
-        print("AB - BA:\n", result1)
-        print("\nA^2 + B^2 + C^2:\n", result2)
-        print("\nsqrt(A) + sqrt(B) - sqrt(C)\n", result3)
-        print("\ne^A * (e^B + e^C):\n", result4)
-
-        print("Rank, inverse, trace and determinant of A:")
-        print("Rank", rank_A)
-        print("Inverse:\n", inv_A)
-        print("Trace:", trace_A)
-        print("Determinant:", det_A)
-
-        print("Rank, inverse, trace and determinant of B:")
-        print("Rank", rank_B)
-        print("Inverse:\n", "There is no inverse on B")
-        print("Trace:", trace_B)
-        print("Determinant:", det_B)
-
-        print("Rank, inverse, trace and determinant of C:")
-        print("Rank", rank_C)
-        print("Inverse:\n", inv_C)
-        print("Trace:", trace_C)
-        print("Determinant:", det_C)
-        
-
-        
-
+        print("Array with random numbers")
+        print(random_array)
+    
     elif (answer == 5):
 
-        find_quadratic_roots(1, 0, -4)
+        random_array = np.random.normal(0, 1, (5, 4))
+
+        print("Array with random numbers")
+        print(random_array)
 
     elif (answer == 6):
 
-        vector = [1 + 4 * i / i ** 2 for i in range(1, 101)]
+        matrix = np.array([[1, 2, 3],
+                  [4, 5, 6],
+                  [7, 8, 9]])
 
-        sum_elements = sum(vector)
+        inverse_matrix = np.linalg.pinv(matrix)
 
-        sorted_vector = sorted(vector)
+        print("Original:")
+        print(matrix)
 
-        reverse_sorted_vector = sorted(vector, reverse=True)
-
-        max_element = max(vector)
-        vector.remove(max_element)
-
-        print("Vector (first 100 elements):", vector)
-        print("Sum of the first 100 elements:", sum_elements)
-        print("Sorted vector (ascending order):", sorted_vector)
-        print("Sorted vector (descending order):", reverse_sorted_vector)
-        print("Vector with the largest element removed:", vector)
+        print("\Inverted:")
+        print(inverse_matrix)
 
     elif (answer == 7):
 
-        A = np.random.rand(10, 10)
+        matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+        diagonal = [matrix[i][i] for i in range(3)]
 
-        determinant_A = np.linalg.det(A)
+        print("Original matrix:")
+        for row in matrix:
+            print(row)
 
-
-        if determinant_A != 0:
-            print("Matrix is invertible")
-        else:
-            print("Singular matrix")
+        print("\nDiagonal of the matrix:")
+        print(diagonal)
 
     elif (answer == 8):
-        matrix = np.linspace(-1, 1, 25).reshape(5, 5)
 
-        sum_of_elements = np.sum(matrix)
+        matrix = np.random.randint(1, 6, (5, 5))
+        determinant = np.linalg.det(matrix)
 
-        max_in_columns = np.max(matrix, axis=0)
-        normalized_matrix = matrix / max_in_columns
-
-        columns_with_negatives = np.any(matrix < 0, axis=0)
-
-        column_with_max_sum = np.argmax(np.sum(matrix, axis=0))
-
+        print("Random 5x5 matrix:")
         print(matrix)
-        print(sum_of_elements)
-        print(normalized_matrix)
-        print(columns_with_negatives)
-        print(column_with_max_sum)
 
+        print("\nDeterminant of the matrix:")
+        print(determinant)
 
+    elif (answer == 9):
+
+        matrix = np.array([[1, 2, 3],
+                          [4, 5, 6],
+                          [7, 8, 9]])
+
+        rank = np.linalg.matrix_rank(matrix)
+
+        print("Original matrix:")
+        print(matrix)
+
+        print("\nRank of the matrix:")
+        print(rank)
+
+    elif (answer == 10):
+
+        matrix = sp.Matrix([[1, 2, 3],
+                           [4, 5, 6],
+                           [7, 8, 9]])
+
+        rref_matrix = matrix.rref()
+
+        print("\nReduced form:")
+        print(rref_matrix[0])
+
+    elif (answer == 11):
+
+        vector = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9])
+
+        matrix = vector.reshape(3, 3)
+
+        print("Matrix:")
+        print(matrix)
+
+    elif (answer == 12):
+
+        matrix = [[1, 2, 3],
+          [4, 5, 6]]
+
+        element = matrix[1][1]
+
+        print("Matrix:")
+        for row in matrix:
+            print(row)
+
+        print("\nSecond element of second line:", element)
+
+    elif (answer == 13):
+
+        matrix = [[1, 2, 3],
+          [4, 5, 6]]
+
+        trace = matrix[0][0] + matrix[1][1]
+
+        print("Matrix:")
+        for row in matrix:
+            print(row)
+
+        print("\nSum of the diagonal:", trace)
+
+    elif (answer == 14):
+
+        matrix = [[1, 2, 3],
+          [4, 5, 6]]
+
+        transpose = [[matrix[j][i] for j in range(len(matrix))] for i in range(len(matrix[0]))]
+
+        print("Original:")
+        for row in matrix:
+            print(row)
+
+        print("\nTransposed:")
+        for row in transpose:
+            print(row)
 
     print("Do you wish to exit?")
     answer2 = input()
