@@ -3,7 +3,6 @@
 <h2 align="center">Codes made in college</h2>
 
 
-
 **Everything is separated in folders for better understanting**
 
 - Tecnologia Moviles -> Uses C# language, codes made to mobile apps
