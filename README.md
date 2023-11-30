@@ -12,6 +12,7 @@
 
 - Algebra -> Python codes that use the numpy library
 > 1 and 2 are both related to matrix
+> Vectors, well... It's for vectors lol
 
 
 <br><br>
