@@ -1,4 +1,3 @@
-# Author: Lucas Barreiro Gomes
 import numpy as np
 from scipy.linalg import null_space
 from scipy.linalg import solve
@@ -13,7 +12,7 @@ while (out):
     print("Welcome\nWich question would you like to see the answer?")
     answer = input()
 
-    while (not isinstance(answer, str) or not (answer.isnumeric() and 0 < int(answer) < 9)):
+    while (not isinstance(answer, str) or not (answer.isnumeric() and 0 < int(answer) < 6)):
         print("Please insert a valid question number")
         answer = input()
     
