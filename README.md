@@ -16,6 +16,11 @@
 > Vectors, well... It's for vectors lol </br>
 > LinealApplications, math equasions o a matrix
 
+- Data Banks -> Uses Java 💀
+> App uses RapidApi to build a json using movies database </br>
+> Recommended IDE:  ![IntelliJ IDEA](https://img.shields.io/badge/IntelliJIDEA-000000.svg?style=for-the-badge&logo=intellij-idea&logoColor=white)
+
+
 
 <br><br>
 **Languages used so far**
@@ -25,6 +30,8 @@
 ![DOTNET](https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=white)
 ![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white)
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=black)
+
 
 
 
