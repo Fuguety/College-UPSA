@@ -17,7 +17,7 @@
 > LinealApplications, math equasions o a matrix
 
 - Data Banks -> Uses Java 💀
-> App uses RapidApi to build a json using movies database </br>
+> App, uses RapidApi to build a json using movies database </br>
 > Recommended IDE:  ![IntelliJ IDEA](https://img.shields.io/badge/IntelliJIDEA-000000.svg?style=for-the-badge&logo=intellij-idea&logoColor=white)
 
 
