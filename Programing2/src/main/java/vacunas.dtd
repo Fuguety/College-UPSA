@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!ELEMENT programaVacunacion (inmunizados, vacunadosUnaDosis, habitantes, vacunas)>
+
+
+<!ELEMENT inmunizados (inmunizado*)>
+<!ELEMENT inmunizado (fechaDosis+)>
+<!ATTLIST inmunizado nssHabitante IDREF #REQUIRED>
+<!ATTLIST inmunizado vacuna IDREF #REQUIRED>
+<!ELEMENT fechaDosis (#PCDATA)>
+
+<!ELEMENT vacunadosUnaDosis (vacunado*)>
+<!ELEMENT vacunado (fechaDosis)>
+<!ATTLIST vacunado nssHabitante IDREF #REQUIRED>
+<!ATTLIST vacunado vacuna IDREF #REQUIRED>
+
+<!ELEMENT habitantes (habitante+)>
+<!ELEMENT habitante (nombre, apellido1, apellido2?, fechaNacimiento, contacto, infoCovid?)>
+<!ATTLIST habitante nss ID #REQUIRED>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellido1 (#PCDATA)>
+<!ELEMENT apellido2 (#PCDATA)>
+<!ELEMENT fechaNacimiento (#PCDATA)>
+
+<!ELEMENT contacto (direccion | telefonoFijo | telefonoMovil)+>
+<!ELEMENT direccion (#PCDATA)>
+<!ELEMENT telefonoFijo (#PCDATA)>
+<!ELEMENT telefonoMovil (#PCDATA)>
+
+<!ELEMENT infoCovid (infeccion+)>
+<!ATTLIST infoCovid pasado (si | no) #REQUIRED>
+<!ELEMENT infeccion (fecha, complicaciones?)>
+<!ATTLIST infeccion numero CDATA #REQUIRED>
+<!ELEMENT fecha (#PCDATA)>
+<!ELEMENT complicaciones EMPTY>
+<!ATTLIST complicaciones intubacion (si | no) #REQUIRED>
+<!ATTLIST complicaciones uci (si | no) #REQUIRED>
+<!ATTLIST complicaciones oxigeno (si | no) #REQUIRED>
+
+<!ELEMENT vacunas (vacuna+)>
+<!ELEMENT vacuna (nombre, pais, nacimientoEmpresa)>
+<!ATTLIST vacuna codigo ID #REQUIRED>
+<!ATTLIST vacuna dosis (1 | 2) #REQUIRED>
+<!ELEMENT pais (#PCDATA)>
+<!ELEMENT nacimientoEmpresa (#PCDATA)>
+
+
+
+
+
+
+
+
+
+<!ELEMENT __ROOT__ ANY>
+<!ATTLIST __ROOT__ version CDATA #REQUIRED>
+

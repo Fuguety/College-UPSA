@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE programaVacunacion SYSTEM "vacunas.dtd">
+
+<programaVacunacion>
+    <inmunizados>
+        <inmunizado nssHabitante="rmm1930" vacuna="PF">
+            <fechaDosis>2021-02-28</fechaDosis>
+            <fechaDosis>2021-01-28</fechaDosis>
+        </inmunizado>
+        <inmunizado nssHabitante="rgg1930" vacuna="JH">
+            <fechaDosis>2021-03-20</fechaDosis>
+        </inmunizado>
+        <inmunizado nssHabitante="rgg1945" vacuna="PF">
+            <fechaDosis>2021-02-28</fechaDosis>
+            <fechaDosis>2021-01-28</fechaDosis>
+        </inmunizado>
+        <inmunizado nssHabitante="lmm1931" vacuna="AZ">
+            <fechaDosis>2021-02-28</fechaDosis>
+            <fechaDosis>2021-01-28</fechaDosis>
+        </inmunizado>
+        <inmunizado nssHabitante="amm1930" vacuna="PF">
+            <fechaDosis>2021-03-18</fechaDosis>
+            <fechaDosis>2021-02-18</fechaDosis>
+        </inmunizado>
+        <inmunizado nssHabitante="fgg1942" vacuna="AZ">
+            <fechaDosis>2021-02-18</fechaDosis>
+            <fechaDosis>2021-01-18</fechaDosis>
+        </inmunizado>
+    </inmunizados>
+    
+    <vacunadosUnaDosis>
+        <vacunado nssHabitante="lmm1942" vacuna="PF">
+            <fechaDosis>2021-03-08</fechaDosis>
+        </vacunado>
+        <vacunado nssHabitante="lmm1944" vacuna="AZ">
+            <fechaDosis>2021-03-09</fechaDosis>
+        </vacunado>
+        <vacunado nssHabitante="lmm1946" vacuna="PF">
+            <fechaDosis>2021-03-10</fechaDosis>
+        </vacunado>
+        <vacunado nssHabitante="jmm1947" vacuna="PF">
+            <fechaDosis>2021-03-20</fechaDosis>
+        </vacunado>
+    </vacunadosUnaDosis>
+    
+    <habitantes>
+        <habitante nss="rmm1930">
+            <nombre>Ramon</nombre>
+            <apellido1>Martin</apellido1>
+            <apellido2>Martin</apellido2>
+            <fechaNacimiento>29-01-1930</fechaNacimiento>
+            <contacto>
+                <direccion>Paseo de la Estacion 1</direccion>
+                <telefonoFijo>923345678</telefonoFijo>
+                <telefonoMovil>620987645</telefonoMovil>
+                <telefonoMovil>630998877</telefonoMovil>
+            </contacto>        
+        </habitante>
+        <habitante nss="rgg1930">
+            <nombre>Raquel</nombre>
+            <apellido1>Garcia</apellido1>
+            <fechaNacimiento>29-04-1930</fechaNacimiento>
+            <contacto>
+                <direccion>Paseo de la Estacion 1</direccion>
+                <telefonoFijo>923345678</telefonoFijo>
+                <telefonoMovil>620987645</telefonoMovil>
+            </contacto>        
+        </habitante>
+        <habitante nss="rgg1945">
+            <nombre>Rogelio</nombre>
+            <apellido1>Garcia</apellido1>
+            <apellido2>Garcia</apellido2>
+            <fechaNacimiento>29-04-1945</fechaNacimiento>
+            <contacto>
+                <telefonoMovil>620987111</telefonoMovil>
+                <direccion>Paseo de la Fuente 1</direccion>
+                <telefonoFijo>923205080</telefonoFijo>      
+            </contacto>        
+        </habitante>
+        <habitante nss="fgg1942">
+            <nombre>Francisco</nombre>
+            <apellido1>Garcia</apellido1>
+            <apellido2>Garcia</apellido2>
+            <fechaNacimiento>29-04-1942</fechaNacimiento>
+            <contacto>
+                <telefonoMovil>620987111</telefonoMovil>    
+            </contacto>        
+        </habitante>
+        <habitante nss="lmm1942">
+            <nombre>Laura</nombre>
+            <apellido1>Martin</apellido1>
+            <apellido2>Martin</apellido2>
+            <fechaNacimiento>12-03-1942</fechaNacimiento>
+            <contacto>
+                <direccion>Paseo de la Estacion s/n</direccion>
+                <telefonoFijo>923345678</telefonoFijo>
+                <telefonoMovil>630997645</telefonoMovil>
+            </contacto>        
+        </habitante>
+        <habitante nss="lmm1944">
+            <nombre>Lorenzo</nombre>
+            <apellido1>Martin</apellido1>
+            <apellido2>Martin</apellido2>
+            <fechaNacimiento>12-03-1944</fechaNacimiento>
+            <contacto>
+                <telefonoFijo>923123678</telefonoFijo>
+            </contacto>        
+        </habitante>
+        <habitante nss="lmm1946">
+            <nombre>Leonor</nombre>
+            <apellido1>Martin</apellido1>
+            <apellido2>Martin</apellido2>
+            <fechaNacimiento>12-01-1946</fechaNacimiento>
+            <contacto>
+                <telefonoFijo>923123000</telefonoFijo>
+            </contacto>        
+        </habitante>
+        <habitante nss="jmm1947">
+            <nombre>Jose</nombre>
+            <apellido1>Martin</apellido1>
+            <apellido2>Martin</apellido2>
+            <fechaNacimiento>11-01-1947</fechaNacimiento>
+            <contacto>
+                <telefonoFijo>923123000</telefonoFijo>
+            </contacto>        
+        </habitante>
+        <habitante nss="amm1930">
+            <nombre>Antonia</nombre>
+            <apellido1>Martin</apellido1>
+            <apellido2>Martin</apellido2>
+            <fechaNacimiento>11-01-1930</fechaNacimiento>
+            <contacto>
+                <telefonoFijo>923000123</telefonoFijo>
+            </contacto>        
+        </habitante>
+        <habitante nss="bmm1930">
+            <nombre>Bienvenido</nombre>
+            <apellido1>Martin</apellido1>
+            <apellido2>Martin</apellido2>
+            <fechaNacimiento>11-02-1930</fechaNacimiento>
+            <contacto>
+                <telefonoFijo>923999123</telefonoFijo>
+            </contacto>  
+            <infoCovid pasado="si">
+                <infeccion numero="1">
+                    <fecha>2020-03-30</fecha>
+                </infeccion>
+                <infeccion numero="2">
+                    <fecha>2020-12-30</fecha>
+                    <complicaciones intubacion="si" uci="si" oxigeno="si"/>
+                </infeccion>
+            </infoCovid>      
+        </habitante>
+        <habitante nss="emm1931">
+            <nombre>Emiliano</nombre>
+            <apellido1>Martin</apellido1>
+            <apellido2>Martin</apellido2>
+            <fechaNacimiento>11-01-1931</fechaNacimiento>
+            <contacto>
+                <telefonoFijo>923010123</telefonoFijo>
+            </contacto>
+            <infoCovid pasado="si">
+                <infeccion numero="1">
+                    <fecha>2020-05-30</fecha>
+                </infeccion>
+            </infoCovid>         
+        </habitante>
+        <habitante nss="dmm1931">
+            <nombre>Dorotea</nombre>
+            <apellido1>Martin</apellido1>
+            <apellido2>Martin</apellido2>
+            <fechaNacimiento>11-03-1931</fechaNacimiento>
+            <contacto>
+                <telefonoFijo>923020123</telefonoFijo>
+            </contacto> 
+            <infoCovid pasado="si">
+                <infeccion numero="1">
+                    <fecha>2020-12-30</fecha>
+                    <complicaciones intubacion="no" uci="no" oxigeno="si"/>
+                </infeccion>
+            </infoCovid>        
+        </habitante>
+        <habitante nss="fmm1931">
+            <nombre>Francisca</nombre>
+            <apellido1>Martin</apellido1>
+            <apellido2>Martin</apellido2>
+            <fechaNacimiento>12-03-1931</fechaNacimiento>
+            <contacto>
+                <telefonoFijo>923030123</telefonoFijo>
+            </contacto> 
+            <infoCovid pasado="si">
+                <infeccion numero="1">
+                    <fecha>2021-01-30</fecha>
+                    <complicaciones intubacion="no" uci="no" oxigeno="si"/>
+                </infeccion>
+            </infoCovid>        
+        </habitante>
+        <habitante nss="gmm1931">
+            <nombre>Gonzalo</nombre>
+            <apellido1>Martin</apellido1>
+            <apellido2>Martin</apellido2>
+            <fechaNacimiento>12-04-1931</fechaNacimiento>
+            <contacto>
+                <telefonoFijo>923040123</telefonoFijo>
+            </contacto>        
+        </habitante>
+        <habitante nss="hmm1931">
+            <nombre>Hipolito</nombre>
+            <apellido1>Martin</apellido1>
+            <apellido2>Martin</apellido2>
+            <fechaNacimiento>12-05-1931</fechaNacimiento>
+            <contacto>
+                <telefonoFijo>923050123</telefonoFijo>
+            </contacto>        
+        </habitante>
+        <habitante nss="imm1931">
+            <nombre>Inocencio</nombre>
+            <apellido1>Martin</apellido1>
+            <apellido2>Martin</apellido2>
+            <fechaNacimiento>18-05-1931</fechaNacimiento>
+            <contacto>
+                <telefonoFijo>923060123</telefonoFijo>
+            </contacto>        
+        </habitante>
+        <habitante nss="jmm1931">
+            <nombre>Julian</nombre>
+            <apellido1>Martin</apellido1>
+            <apellido2>Martin</apellido2>
+            <fechaNacimiento>19-05-1931</fechaNacimiento>
+            <contacto>
+                <telefonoFijo>923070123</telefonoFijo>
+            </contacto>        
+        </habitante>
+        <habitante nss="lmm1931">
+            <nombre>Luciana</nombre>
+            <apellido1>Martin</apellido1>
+            <apellido2>Martin</apellido2>
+            <fechaNacimiento>18-05-1931</fechaNacimiento>
+            <contacto>
+                <telefonoFijo>923080123</telefonoFijo>
+            </contacto>        
+        </habitante> 
+        <habitante nss="mmm1931">
+            <nombre>Margarita</nombre>
+            <apellido1>Martin</apellido1>
+            <apellido2>Martin</apellido2>
+            <fechaNacimiento>18-05-1931</fechaNacimiento>
+            <contacto>
+                <telefonoFijo>923090123</telefonoFijo>
+            </contacto>        
+        </habitante>
+        <habitante nss="nmm1931">
+            <nombre>Norberto</nombre>
+            <apellido1>Martin</apellido1>
+            <apellido2>Martin</apellido2>
+            <fechaNacimiento>18-05-1931</fechaNacimiento>
+            <contacto>
+                <telefonoFijo>923100123</telefonoFijo>
+            </contacto>        
+        </habitante>         
+    </habitantes>
+   
+    <vacunas>
+        <vacuna codigo="AZ" dosis="2">
+            <nombre>Astra Zeneca</nombre>
+            <pais>Reino Unido</pais>     
+            <nacimientoEmpresa>1999</nacimientoEmpresa>
+        </vacuna>
+        <vacuna codigo="PF" dosis="2">
+            <nombre>Pfizer</nombre>
+            <pais>Estados Unidos</pais>     
+            <nacimientoEmpresa>1849</nacimientoEmpresa>
+        </vacuna>
+        <vacuna codigo="JH" dosis="1">
+            <nombre>Jhonson and Jhonson</nombre>
+            <pais>Estados Unidos</pais>     
+            <nacimientoEmpresa>1886</nacimientoEmpresa>
+        </vacuna>
+        <vacuna codigo="SC" dosis="2">
+            <nombre>Sinopharm</nombre>
+            <pais>China</pais>     
+            <nacimientoEmpresa>1998</nacimientoEmpresa>
+        </vacuna>
+        <vacuna codigo="SP" dosis="2">
+            <nombre>SputnikV</nombre>
+            <pais>Russia</pais>     
+            <nacimientoEmpresa>1891</nacimientoEmpresa>
+        </vacuna>
+    </vacunas>
+    
+</programaVacunacion>
+

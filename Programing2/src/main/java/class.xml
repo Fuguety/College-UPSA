@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE class SYSTEM "class.dtd">
+
+<class>
+
+    <nameClass>Programming 2</nameClass>
+    <credits>6</credits>
+    <year>1</year>
+    <classType>Mandatory</classType>
+
+    <students>
+
+        <student>
+            <name>Neymar</name>
+            <surname>Jr</surname>
+            <grades>7</grades>
+        </student>
+        <student>
+            <name>Messi</name>
+            <surname>Soprando</surname>
+            <grades>10</grades>
+        </student>
+        <student>
+            <name>Felipe</name>
+            <surname>Massa</surname>
+            <grades>9</grades>
+        </student>
+
+    </students>
+
+    <teachers>
+
+        <teacher>
+            <nameTeacher>Airton</nameTeacher>
+            <surnameTeacher>Senna</surnameTeacher>
+        </teacher>
+        <teacher>
+            <nameTeacher>Jhonny</nameTeacher>
+            <surnameTeacher>Silverhand</surnameTeacher>
+        </teacher>
+
+    </teachers>
+
+</class>
+

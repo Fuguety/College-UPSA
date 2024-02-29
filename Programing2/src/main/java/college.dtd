@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!ELEMENT college (classes)>
+<!ELEMENT classes (class+)>
+<!ELEMENT class (nameClass, credits, year, classType, students, teachers)>
+
+<!ELEMENT nameClass (#PCDATA)>
+<!ELEMENT credits (#PCDATA)>
+<!ELEMENT year (#PCDATA)>
+<!ELEMENT classType (#PCDATA)>
+
+
+<!ELEMENT students (student+)>
+<!ELEMENT student (name, surname, grades?)>
+<!ATTLIST student nexpedient ID #REQUIRED>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT surname (#PCDATA)>
+<!ELEMENT grades (#PCDATA)>
+
+
+<!ELEMENT teachers (teacher+)>
+<!ELEMENT teacher (nameTeacher, surnameTeacher)>
+<!ATTLIST teacher nif ID #REQUIRED>
+<!ELEMENT nameTeacher (#PCDATA)>
+<!ELEMENT surnameTeacher (#PCDATA)>
+
+<!ELEMENT __ROOT__ ANY>
+<!ATTLIST __ROOT__ version CDATA #REQUIRED>
+

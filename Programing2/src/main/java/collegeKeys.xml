@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE college SYSTEM "collegeKeys.dtd">
+
+
+<college>
+    
+    <classes>
+        <class
+            nifProfessors='_00000001a _00000002a'>
+
+            <nameClass>Programming 2</nameClass>
+            <credits>6</credits>
+            <year>1</year>
+            <classType>Mandatory</classType>
+
+            <students>
+
+                <Matriculatedstudent nexpedient='_00001' >
+                    <grades>7</grades>
+                </Matriculatedstudent>
+                <Matriculatedstudent nexpedient='_00001'>
+                    <grades>7</grades>
+                </Matriculatedstudent>
+                <Matriculatedstudent nexpedient='_00002'>
+                    <grades>10</grades>
+                </Matriculatedstudent>
+                <Matriculatedstudent nexpedient='_00003'>
+                    <grades>9</grades>
+                </Matriculatedstudent>
+
+            </students>
+
+            <teachers>
+
+                <teacher nif='_00000001a'>
+                    <nameTeacher>Airton</nameTeacher>
+                    <surnameTeacher>Senna</surnameTeacher>
+                </teacher>
+                <teacher nif='_00000002a'>
+                    <nameTeacher>Jhonny</nameTeacher>
+                    <surnameTeacher>Silverhand</surnameTeacher>
+                </teacher>
+            </teachers>
+        </class>
+        
+        
+        <class
+            nifProfessors='_00000003a _00000004a'>
+
+            <nameClass>Data Banks 2</nameClass>
+            <credits>6</credits>
+            <year>2</year>
+            <classType>Mandatory</classType>
+
+            <students>
+
+                <Matriculatedstudent nexpedient='_00004'>
+                    <grades>3</grades>
+                </Matriculatedstudent>
+                <Matriculatedstudent nexpedient='_00005'>
+                    <grades>10</grades>
+                </Matriculatedstudent>
+                <Matriculatedstudent nexpedient='_00006'>
+                    <grades>5</grades>
+                </Matriculatedstudent>
+
+            </students>
+
+            <teachers>
+
+                <teacher nif='_00000003a'>
+                    <nameTeacher>Luis</nameTeacher>
+                    <surnameTeacher>Lula</surnameTeacher>
+                </teacher>
+                <teacher nif='_00000004a'>
+                    <nameTeacher>Jair</nameTeacher>
+                    <surnameTeacher>Bolsonaro</surnameTeacher>
+                </teacher>
+            </teachers>
+        </class>
+        
+        <class 
+            nifProfessors='_00000005a' >
+
+            <nameClass>Estatistics</nameClass>
+            <credits>6</credits>
+            <year>2</year>
+            <classType>Oprional</classType>
+
+            <students>
+
+                <Matriculatedstudent nexpedient='_00007'>
+                    <grades>0</grades>
+                </Matriculatedstudent>
+                <Matriculatedstudent nexpedient='_00008'>
+                    <grades>8</grades>
+                </Matriculatedstudent>
+
+            </students>
+
+            <teachers>
+
+                <teacher nif='_00000005a'>
+                    <nameTeacher>Donald</nameTeacher>
+                    <surnameTeacher>Trump</surnameTeacher>
+                </teacher>
+                
+            </teachers>
+        </class>
+
+    </classes>
+    
+    <studentsInCollege>
+        
+                <student nexpedient='_00001'>
+                    <name>Neymar</name>
+                    <surname>Jr</surname>
+                    <grades>7</grades>
+                </student>
+                <student nexpedient='_00002'>
+                    <name>Messi</name>
+                    <surname>Soprando</surname>
+                    <grades>10</grades>
+                </student>
+                <student nexpedient='_00003'>
+                    <name>Felipe</name>
+                    <surname>Massa</surname>
+                    <grades>9</grades>
+                </student>
+                <student nexpedient='_00004'>
+                    <name>Carlos</name>
+                    <surname>Augustus</surname>
+                    <grades>3</grades>
+                </student>
+                <student nexpedient='_00005'>
+                    <name>Dom</name>
+                    <surname>Pedro</surname>
+                    <grades>10</grades>
+                </student>
+                <student nexpedient='_00006'>
+                    <name>Felipe</name>
+                    <surname>Montana</surname>
+                    <grades>5</grades>
+                </student>
+                <student nexpedient='_00007'>
+                    <name>Dilma</name>
+                    <surname>Rouseff</surname>
+                    <grades>0</grades>
+                </student>
+                <student nexpedient='_00008'>
+                    <name>Joe</name>
+                    <surname>Biden</surname>
+                    <grades>8</grades>
+                </student>
+        
+    </studentsInCollege>
+    
+</college>

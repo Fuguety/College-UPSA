@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT class (nameClass, credits, year, classType, students, teachers)>
+
+<!ELEMENT nameClass (#PCDATA)>
+<!ELEMENT credits (#PCDATA)>
+<!ELEMENT year (#PCDATA)>
+<!ELEMENT classType (#PCDATA)>
+
+
+<!ELEMENT students (student+)>
+<!ELEMENT student (name, surname, grades?)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT surname (#PCDATA)>
+<!ELEMENT grades (#PCDATA)>
+
+
+<!ELEMENT teachers (teacher+)>
+<!ELEMENT teacher (nameTeacher, surnameTeacher)>
+<!ELEMENT nameTeacher (#PCDATA)>
+<!ELEMENT surnameTeacher (#PCDATA)>
+
+
+
